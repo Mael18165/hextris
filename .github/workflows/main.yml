@@ -11,7 +11,7 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: files.000webhost.com
-        username: sitewebmael
-        password: p8DS&C*D2Q((&yJvN#gl
-        server-dir : public_html/tetris/
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir : ${{ secrets.FTP_DIRECTORY }}
